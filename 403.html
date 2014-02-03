@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Uh uh uh! You didn't say the magic word!</title>
+    <style>
+      body { background-color: #fff; }
+      #wrapper { position: absolute; top: 50%; margin-top: -124px; left: 0; width: 100%; }
+      #nedry { height: 248px; width: 320px; margin: 0 auto; }
+    </style>
+    <script>
+      var snd = new Audio("sounds/magicwrd.wav");
+      var loop = false;
+      snd.addEventListener("ended", function(){
+        if(!loop) {
+          snd.src = "sounds/uhuhuh.wav";
+          snd.load();
+          window.setTimeout(function(){snd.play()}, 250);
+          loop = true;
+        } else {
+          snd.currentTime = 0;
+          snd.play();
+        }
+      });
+      window.onload = function(){snd.play()};
+    </script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <div id="nedry">
+        <img src="images/nedry.gif" alt="Uh uh uh!">
+      </div>
+    </div>
+  </body>
+</html>
