@@ -4,6 +4,7 @@
     <title>Uh uh uh! You didn't say the magic word!</title>
     <style>
       body { background-color: #fafafa; }
+      img:hover { cursor: pointer; }
       #wrapper { position: absolute; top: 50%; margin-top: -124px; left: 0; width: 100%; }
       #nedry { height: 248px; width: 320px; margin: 0 auto; }
     </style>
@@ -21,14 +22,13 @@
           snd.play();
         }
       });
-      window.onload = function(){snd.play()};
     </script>
   </head>
 
   <body>
     <div id="wrapper">
       <div id="nedry">
-        <img src="images/nedry.gif" alt="Uh uh uh!">
+        <img src="images/nedry.gif" alt="Uh uh uh!" onclick="snd.play()">
       </div>
     </div>
   </body>
