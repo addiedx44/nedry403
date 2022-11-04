@@ -8,11 +8,11 @@
       #nedry { height: 248px; width: 320px; margin: 0 auto; }
     </style>
     <script>
-      var snd = new Audio("sounds/magicwrd.wav");
+      var snd = new Audio("./sounds/magicwrd.wav");
       var loop = false;
       snd.addEventListener("ended", function(){
         if(!loop) {
-          snd.src = "sounds/uhuhuh.wav";
+          snd.src = "./sounds/uhuhuh.wav";
           snd.load();
           window.setTimeout(function(){snd.play()}, 250);
           loop = true;
